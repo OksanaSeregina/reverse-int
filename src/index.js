@@ -1,3 +1,10 @@
 module.exports = function reverse (n) {
-  return parseFloat(n.toString().split('').reverse().join('')) * Math.sign(n)
+  let string = Math.abs(n).toString();
+  let res = '';
+
+  for (let i = 0; i < string.length; i++) {
+    res = `${string[i]}${res}`;
+  }
+
+  return +res;
 }
